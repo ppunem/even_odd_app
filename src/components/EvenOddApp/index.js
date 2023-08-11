@@ -9,9 +9,9 @@ class EvenOddApp extends Component {
     const {count, type} = this.state
     const num = Math.ceil(Math.random() * 100)
     if (num % 2 === 0) {
-      this.setState(prevState => ({count: num, type: 'Even'}))
+      this.setState({count: num, type: 'Even'})
     } else {
-      this.setState(prevState => ({count: num, type: 'Odd'}))
+      this.setState({count: num, type: 'Odd'})
     }
   }
 
