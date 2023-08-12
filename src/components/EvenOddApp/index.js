@@ -6,7 +6,6 @@ class EvenOddApp extends Component {
   state = {count: 0, type: 'Even'}
 
   randomNumber = () => {
-    const {count, type} = this.state
     const num = Math.ceil(Math.random() * 100)
     if (num % 2 === 0) {
       this.setState({count: num, type: 'Even'})
@@ -19,8 +18,8 @@ class EvenOddApp extends Component {
     const {count, type} = this.state
     return (
       <div className="main-container">
-        <h1 className="count-head">Count `${count}`</h1>
-        <p className="count-type">Count is `${type}`</p>
+        <h1 className="count-head">Count {count}</h1>
+        <p className="count-type">Count is {type}</p>
         <button type="button" onClick={this.randomNumber}>
           Increment
         </button>
